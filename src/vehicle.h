@@ -8,6 +8,7 @@
 
 class Vehicle: public System {
   public:
+    /*
     float moment_inertia[3][3];	  
     float mass;
     float position[3];
@@ -16,7 +17,8 @@ class Vehicle: public System {
     std::array<float, 3> forces();
     std::array<float, 3> acceleration();
 
-    Vehicle(float mass);
+	*/
+    Vehicle(float mass) : System(mass) {}
 };
 
 #endif
