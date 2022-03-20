@@ -3,11 +3,10 @@
 
 #include <array>
 
-#define g 9.81
 
 class System {
   public:
-    float moment_inertia[3][3];	  
+    float moment_inertia[3][3];
     float mass;
     float position[3];
     float velocity[3];
