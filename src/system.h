@@ -1,12 +1,11 @@
-#ifndef VEHICLE_H
-#define VEHICLE_H
+#ifndef SYSTEM_H
+#define SYSTEM_H
 
 #include <array>
 
-#include "system.h"
+#define g 9.81
 
-
-class Vehicle: public System {
+class System {
   public:
     float moment_inertia[3][3];	  
     float mass;
@@ -16,7 +15,7 @@ class Vehicle: public System {
     std::array<float, 3> forces();
     std::array<float, 3> acceleration();
 
-    Vehicle(float mass);
-};
+    System(float mass);
+}
 
 #endif
