@@ -14,7 +14,7 @@ tests: tests.o
 	./$(BUILDDIR)/$<
 
 tests.o: system.o
-	$(CXX) $(CXXFLAGS) $(TESTDIR)/* $(BUILDDIR)/$^ -o $(BUILDDIR)/tests.o  $(TESTLIBLINK)
+	$(CXX) $(CXXFLAGS) $(TESTDIR)/* $(BUILDDIR)/$^ -o $(BUILDDIR)/tests.o  $(TESTLIBLINK) -fprofile-arcs -ftest-coverage
 
 #system.o: src/system.cpp
 	#$(CXX) $(CXXFLAGS) -c $< -o $(BUILDDIR)/$@
