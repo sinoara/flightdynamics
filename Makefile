@@ -21,3 +21,6 @@ tests.o: system.o
 
 %.o : src/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $(BUILDDIR)/$@
+
+clean:
+	rm -f obj/*.o *.o
