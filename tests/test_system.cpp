@@ -1,10 +1,10 @@
 #include "gtest/gtest.h"
 
-#include "../src/vehicle.cpp"
+#include "../src/system.h"
 
 
-TEST(VehicleTest, WeightTest){
-    Vehicle veh(1.0);
+TEST(SystemTest, WeightTest){
+    System sys(1.0);
     ASSERT_EQ(0, 0);
 }
 
