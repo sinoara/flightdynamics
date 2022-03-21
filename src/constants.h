@@ -1,8 +1,5 @@
-#ifndef CONSTANTS_H
-#define CONSTANTS_H
+#pragma once
 
 namespace constants {
 	static const float g=9.80665;
 }
-
-#endif
