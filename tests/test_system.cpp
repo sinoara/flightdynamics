@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 
-#include "../src/system.hpp"
+#include "../src/system/system.hpp"
 
 
 TEST(SystemTest, WeightTest){
