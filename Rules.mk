@@ -1,8 +1,8 @@
 # Directories
-dir := tests
+dir := src
 include $(dir)/Rules.mk
 
-dir := src
+dir := tests
 include $(dir)/Rules.mk
 
 # General rules
@@ -12,6 +12,9 @@ include $(dir)/Rules.mk
 	$(LINK)
 % : %.cpp
 	$(COMPLINK)
+
+# Variable to hold all objects
+ALL_OBJS := 
 
 .PHONY: clean
 clean:

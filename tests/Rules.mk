@@ -11,6 +11,7 @@ OBJS_$(d)		:= $(d)/test_all.o $(d)/test_loads.o \
 DEPS_$(d)		:= $(OBJS_$(d):%=%.d)
 
 CLEAN			:= $(CLEAN) $(OBJS_$(d)) $(DEPS_$(d)) \
+				   $(d)/test_all
 
 # Local rules
 
@@ -22,7 +23,7 @@ runtests: $(d)/test_all
 	chmod +x $<
 	./$<
 
-$(d)/test_all: $(OBJS_$(d))
+$(d)/test_all: $(OBJS_$(d)) $(ALL_OBJS)
 
 
 # Standard things

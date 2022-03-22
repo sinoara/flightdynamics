@@ -10,7 +10,7 @@ d				:= $(dir)
 OBJS_$(d)		:= $(d)/load.o $(d)/weight.o
 DEPS_$(d)		:= $(OBJS_$(d):%=%.d)
 
-CLEAN			:= $(CLEAN) $(OBJS_$(d)) $(DEPS_$(d)) \
+CLEAN			:= $(CLEAN) $(OBJS_$(d)) $(DEPS_$(d))
 
 # Local rules
 
@@ -18,6 +18,7 @@ $(OBJS_$(d)):	CXXF_T := -I$(d)
 
 #
 # Standard things
+ALL_OBJS := $(ALL_OBJS) $(OBJS_$(d))
 
 -include	$(DEPS_$(d))
 
