@@ -1,7 +1,6 @@
 #pragma once
 
 #include "load.hpp"
-#include "../constants.hpp"
 
 class Weight : public Load {
 	public:
