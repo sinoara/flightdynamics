@@ -1,14 +1,22 @@
+## Build tools
 # Compiler
-CXX 		= g++
+CXX		= ./ccd-g++
 
 # Build flags
-CXXFLAGS 	= -Wall -g
+CXXF 	= -Wall -g
+CXXLF	= 
 
-TESTLIBLINK = -lgtest
+COMP     = $(CXX) $(CXXF) $(CXXF_T) -o $@ -c $<
+LINK 	 = $(CXX) $(CXXLF) $(CXXLF_T) -o $@ $^
+COMPLINK = $(CXX) $(CXXF) $(CXXF_T) $(CXXLF) $(CXXLF_T) -o $@ $<
+
+
+# Test lib flag
+TESTLIBFLAG = -lgtest
+
 
 # Directories
 SOURCEDIR 	= src
-BUILDDIR 	= obj
 TESTDIR 	= tests
 
 include Rules.mk
