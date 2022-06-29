@@ -1,7 +1,7 @@
 # flightdynamics
 
-```mermaid
 ## Diagram
+```mermaid
 sequenceDiagram
     participant FDM
     participant Vehicle 
