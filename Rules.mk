@@ -1,12 +1,20 @@
-# Tests
-tests: tests.o
-	./$(BUILDDIR)/$<
+# Directories
+dir := tests
+include $(dir)/Rules.mk
 
-tests.o: system.o
-	$(CXX) $(CXXFLAGS) $(TESTDIR)/* $(BUILDDIR)/$^ -o $(BUILDDIR)/tests.o  $(TESTLIBLINK) #-fprofile-arcs -ftest-coverage
+dir := src
+include $(dir)/Rules.mk
 
-%.o : src/%.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $(BUILDDIR)/$@
+# General rules
+%.o : %.cpp
+	$(COMP)
+% : %.o
+	$(LINK)
+% : %.cpp
+	$(COMPLINK)
 
+.PHONY: clean
 clean:
-	rm -f obj/*.o *.o
+	rm -f $(CLEAN)
+
+.SECONDARY:	$(CLEAN)
