@@ -1,13 +1,15 @@
 # Compiler
-CXX :=g++
+CXX 		= g++
 
-CXXFLAGS := -Wall -g
+# Build flags
+CXXFLAGS 	= -Wall -g
 
-SOURCEDIR := src
-BUILDDIR := obj
-TESTDIR := tests
+TESTLIBLINK = -lgtest
 
-TESTLIBLINK := -lgtest
+# Directories
+SOURCEDIR 	= src
+BUILDDIR 	= obj
+TESTDIR 	= tests
 
 
 tests: tests.o
