@@ -34,3 +34,6 @@
 # Code coverage files
 *.gcda
 *.gcno
+
+# Test executablew
+tests/test_all
