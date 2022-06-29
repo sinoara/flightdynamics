@@ -13,8 +13,11 @@ TESTLIBLINK := -lgtest
 tests: tests.o
 	./$(BUILDDIR)/$<
 
-tests.o: obj/system.o
-	$(CXX) $(CXXFLAGS) $(TESTDIR)/* $^ -o $(BUILDDIR)/tests.o  $(TESTLIBLINK)
+tests.o: system.o
+	$(CXX) $(CXXFLAGS) $(TESTDIR)/* $(BUILDDIR)/$^ -o $(BUILDDIR)/tests.o  $(TESTLIBLINK)
 
-%.o : %.cpp
-	$(CXX) $(CXXFLAGS) -c $(SOURCEDIR)/$< -o $(BUILDDIR)/$@
+#system.o: src/system.cpp
+	#$(CXX) $(CXXFLAGS) -c $< -o $(BUILDDIR)/$@
+
+%.o : src/%.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $(BUILDDIR)/$@
