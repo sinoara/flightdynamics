@@ -1,5 +1,20 @@
-tests: tests.o
-	./bin/tests.o
+# Compiler
+CXX :=g++
 
-tests.o:
-	g++ tests/test_vehicle.cpp -o bin/tests.o -lgtest
+CXXFLAGS := -Wall -g
+
+SOURCEDIR := src
+BUILDDIR := obj
+TESTDIR := tests
+
+TESTLIBLINK := -lgtest
+
+
+tests: tests.o
+	./$(BUILDDIR)/$<
+
+tests.o: obj/system.o
+	$(CXX) $(CXXFLAGS) $(TESTDIR)/* $^ -o $(BUILDDIR)/tests.o  $(TESTLIBLINK)
+
+%.o : %.cpp
+	$(CXX) $(CXXFLAGS) -c $(SOURCEDIR)/$< -o $(BUILDDIR)/$@
