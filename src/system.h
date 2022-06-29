@@ -1,5 +1,4 @@
-#ifndef SYSTEM_H
-#define SYSTEM_H
+#pragma once
 
 #include <array>
 #include <vector>
@@ -22,5 +21,3 @@ class System {
 
     System(float mass);
 };
-
-#endif

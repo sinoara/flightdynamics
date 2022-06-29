@@ -1,5 +1,4 @@
-#ifndef VEHICLE_H
-#define VEHICLE_H
+#pragma once
 
 #include <array>
 
@@ -10,5 +9,3 @@ class Vehicle: public System {
   public:
     Vehicle(float mass) : System(mass) {}
 };
-
-#endif
