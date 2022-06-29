@@ -3,7 +3,8 @@
 
 std::array<float, 3> Weight::forces() {
 	// force in earth axis and on the CG
-	return std::array<float, 3> {0.0, 0.0, 0.0};
+	float mass = parent_->mass;
+	return std::array<float, 3> {0.0, 0.0, constants::g*mass};
 };
 
 std::array<float, 3> Weight::moments() {
