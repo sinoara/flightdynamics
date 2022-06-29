@@ -1,4 +1,5 @@
 #include "weight.hpp"
+#include "../constants.hpp"
 
 std::array<float, 3> Weight::forces() {
 	return std::array<float, 3> {0.0, 0.0, 0.0};
