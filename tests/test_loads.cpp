@@ -5,5 +5,8 @@
 
 
 TEST(LoadsTest, WeightTest){
+	System system(1.0);
+
+	Weight weight(&system);
     ASSERT_EQ(0, 0);
 }
