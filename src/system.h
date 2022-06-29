@@ -16,6 +16,6 @@ class System {
     std::array<float, 3> acceleration();
 
     System(float mass);
-}
+};
 
 #endif
