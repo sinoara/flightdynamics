@@ -13,7 +13,7 @@ class Load {
 
 		Load(System *parent);
 
-	private:
+	protected:
 		// parent System of the Load
 		System *parent_;
 };
