@@ -1,5 +1,6 @@
 # flightdynamics
 
+```mermaid
 ## Diagram
 sequenceDiagram
     participant FDM
@@ -7,3 +8,4 @@ sequenceDiagram
     participant Loads 
 	
 	FDM->>Vehicle: Get loads, inertias and positions
+```
