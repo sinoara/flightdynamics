@@ -18,6 +18,7 @@ $(OBJS_$(d)):	CXXF_T := -I$(d)
 
 #
 # Standard things
+ALL_OBJS := $(ALL_OBJS) $(OBJS_$(d))
 
 -include	$(DEPS_$(d))
 
