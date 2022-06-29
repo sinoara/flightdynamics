@@ -1,5 +1,4 @@
-#ifndef LOAD_H
-#define LOAD_H
+#pragma once
 
 #include <array>
 
@@ -14,6 +13,3 @@ class Load {
 
 		Load(System *parent);
 };
-
-
-#endif
