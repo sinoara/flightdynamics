@@ -1,3 +1,4 @@
+# Makefile based on http://sites.e-advies.nl/nonrecursive-make.html
 ## Build tools
 # Compiler
 CXX		= ./ccd-g++

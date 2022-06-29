@@ -8,12 +8,14 @@
 
 
 TEST(LoadsTest, WeightForcesValueTest){
+	// map with system masses and expected values to be tested
 	std::map<float, std::array<float, 3>> testValues {
 	  	{0.0, std::array<float, 3> {0.0, 0.0, 0.0}},
 	  	{1.0, std::array<float, 3> {0.0, 0.0, constants::g*1.0}},
 	  	{3.5, std::array<float, 3> {0.0, 0.0, constants::g*3.5}},
 	};
 
+	// loop through map and test values
 	for (auto const& [input, expected] : testValues) {
 		System system(input);
 		Weight weight(&system);
@@ -22,10 +24,20 @@ TEST(LoadsTest, WeightForcesValueTest){
 	}
 }
 
-TEST(LoadsTest, MomentTest){
-	System system(1.0);
+TEST(LoadsTest, WeigthMomentsTest){
+	// map with system masses and expected values to be tested
+	std::array<float, 3> zeroArray =  {0.0, 0.0, 0.0};
+	std::map<float, std::array<float, 3>> testValues {
+	  	{0.0, zeroArray},
+	  	{1.0, zeroArray},
+	  	{3.5, zeroArray},
+	};
 
-	Weight weight(&system);
-	std::array<float, 3> expected {0.0, 0.0, 0.0};
-    ASSERT_EQ(expected, weight.forces());
+	// loop through map and test values
+	for (auto const& [input, expected] : testValues) {
+		System system(input);
+		Weight weight(&system);
+
+		ASSERT_EQ(expected, weight.moments());
+	}
 }
