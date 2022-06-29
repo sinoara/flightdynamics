@@ -2,7 +2,7 @@
 
 #include <array>
 
-#include "system.h"
+#include "system.hpp"
 
 class Load {
 	public:
