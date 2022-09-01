@@ -11,8 +11,8 @@ TEST(LoadsTest, WeightForcesValueTest){
 	// map with system masses and expected values to be tested
 	std::map<float, std::array<float, 3>> testValues {
 	  	{0.0, std::array<float, 3> {0.0, 0.0, 0.0}},
-	  	{1.0, std::array<float, 3> {0.0, 0.0, constants::g*1.0}},
-	  	{3.5, std::array<float, 3> {0.0, 0.0, constants::g*3.5}},
+	  	{1.0, std::array<float, 3> {0.0, 0.0, constants::g*1.0f}},
+	  	{3.5, std::array<float, 3> {0.0, 0.0, constants::g*3.5f}},
 	};
 
 	// loop through map and test values
